@@ -1,0 +1,168 @@
+*{
+  margin:auto;
+  font-family: 'Roboto';
+}
+body{
+      background-color: #1f5bff;
+}
+.clearfix{
+  background-color:rgb(73, 96, 166);
+  margin-bottom: 20px;
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  display: flex;
+}
+
+.container{
+display: flex;
+align-content: center;
+flex-flow: row wrap;
+justify-content: center;
+}
+
+.user-panel{
+  display: flex;
+  flex-direction: row;
+margin: 0;
+}
+
+.u-text{
+  text-align: center;
+  color: white;
+}
+
+.u-text1{
+  text-align: center;
+  font-size: 1.5em;
+  color: #1f5bff;
+  margin-bottom: 20px;
+}
+
+.u-text2{
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.item{
+  background-color: white;
+  margin: 50px 50px 50px 50px;
+  width:25%;
+}
+
+.item-input{
+  background-color: white;
+  width:25%;
+  padding: 10px;
+  text-align: center;
+}
+
+.u-section{
+  min-height: 947px;
+}
+
+.header-right{
+  margin:auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  color:rgb(246, 175, 133)
+}
+
+.register{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  margin: 0;
+  }
+
+.form-input{
+  display: flex;
+  align-content: flex-end;
+}
+
+input{
+ margin: 0px 0px 0px 10%;
+ align-content: flex-end;
+}
+
+.popup-section{
+  position:sticky;
+  top:50px;
+  padding-bottom: 100px;
+}
+
+
+.hider{
+    visibility: hidden;
+    position: fixed;
+}
+
+.alert{
+  color:red;
+  font-size: 2em;
+}
+
+.add-task{
+height: 80px;
+width:140px;
+}
+
+.adder{
+margin-top: 25px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.alert--fail, .alert--error{
+  position:sticky;
+  top:5px;
+  padding-bottom: 50px;
+  background-color: red;
+  color:white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.alert--success{
+  position:sticky;
+  top:5px;
+  padding-bottom: 50px;
+  background-color: green;
+  color:white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.deleteTask{
+color:red;
+text-decoration-line: none;
+font-size: 2em;
+}
+
+.logo{
+  height:8em;
+}
+
+.logoanchor{
+  margin-left: 0;
+}
+
+a.header-right{
+  text-decoration-line: none;
+  color: azure;
+}
+
+a:hover{
+  color:darkkhaki;
+}
+
+.not-logged{
+  font-size: 2em;
+  color:rgb(246, 175, 133)
+}

@@ -1,0 +1,75 @@
+doctype html
+head
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(charset='utf-8')
+  title Title
+  link(rel='stylesheet' href='/css/nicepage.css' media='screen')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i')
+header
+  .clearfix
+    a.logoanchor(href='#' src='')
+      img.logo(src='/img/default-logo.png')
+    .user-panel
+      if user
+           p.header-right=`Welcome ${user}`
+           a.header-right.logout(href='#' src='') Log out
+      else
+            p.header-right You are not logged in
+            a.header-right.login(href='#' src='') Log in 
+            a.header-right.registerbtn(href='#' src='') Register
+section.error.hider
+section.register-section.popup-section.hider
+    form.register-form.register
+      .item-input.form-input
+        label(for="username") Username
+        input(type="text", name="username" placeholder='Insert name' id='regname')
+      .item-input.form-input
+        label(for="useremail") Email
+        input(type="email", name="useremail" placeholder='your@email.com' id='regmail')
+      .item-input.form-input
+        label(for="userpassword") Password
+        input(type="password", name="userpassword" id='regpass')
+      .item-input.form-input
+        label(for="userpasswordConf") Confirm Password
+        input(type="password", name="userpasswordConf" id='regpass2')
+      .item-input
+        input.reset(type="reset", value="close")
+        input(type="submit", value="Register")
+section.login-section.popup-section.hider
+    form.login-form.register
+      .item-input.form-input
+        label(for="username") Username
+        input(type="text", name="username" placeholder='Insert name' id='logname')
+      .item-input.form-input
+        label(for="userpassword") Password
+        input(type="password", name="userpassword" id='logpass')
+      .item-input
+        input.reset(type="reset", value="close")
+        input(type="submit", value="Login")
+section.section-add-task.popup-section.hider
+    form.task-form.register
+      .item-input.form-input
+        textarea(name="task", cols="300", rows="3" id='task-text')
+      .item-input
+        input.reset(type="reset", value="close")
+        input(type="submit", value="insert" placeholder='insert note here')
+section.u-section
+  .colored
+    if !user
+      p.u-text.not-logged Not logged in. You still can add tasks, however they will be stored locally
+    h1.u-text=title
+    p.u-text Built to learn Node.js,mongoose,express
+    .adder
+      button.add-task Add New Task
+    .container
+      if tasks
+          each task in tasks
+              .item
+                  a.u-text2.deleteTask(href='#' data-task-id=`${task.id}`) X
+                  h4.u-text1=task.creationDate.toLocaleString()
+                  p.u-text2=task.text
+footer
+  div
+    p.u-text Created by Radoslaw Kazimierczuk
+
+    script(src="/js/bundle.js")
